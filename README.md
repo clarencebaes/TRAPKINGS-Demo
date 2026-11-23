@@ -1,5 +1,7 @@
 # TRAPKINGS Demo
 
+![TRAPKINGS storefront homepage](.github/screenshots/storefront-home.png)
+
 TRAPKINGS is a streetwear storefront and store management system. It brings the shopper experience and the staff tools for managing a small clothing store into one app. The storefront is built with React, and the backend uses FastAPI and MySQL or MariaDB.
 
 ## What you can try
