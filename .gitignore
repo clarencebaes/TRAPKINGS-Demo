@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+node_modules/
+dist/
+.env
+.runtime/
+
+.env.*
+!.env.example
+*.sql
+!/database/schema.sql
+*.sqlite*
+*.db
+*.csv
+*.pem
+*.key

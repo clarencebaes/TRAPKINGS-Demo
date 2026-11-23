@@ -1,0 +1,94 @@
+CREATE TABLE IF NOT EXISTS users (
+  id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  username VARCHAR(60) NOT NULL UNIQUE,
+  email VARCHAR(254) NOT NULL UNIQUE,
+  password_hash VARCHAR(255) NOT NULL,
+  role ENUM('shopper','admin') NOT NULL DEFAULT 'shopper',
+  active BOOLEAN NOT NULL DEFAULT TRUE,
+  full_name VARCHAR(120) NOT NULL DEFAULT '',
+  address VARCHAR(500) NOT NULL DEFAULT '',
+  phone VARCHAR(40) NOT NULL DEFAULT '',
+  note VARCHAR(250) NOT NULL DEFAULT '',
+  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+CREATE TABLE IF NOT EXISTS sessions (
+  token_hash CHAR(64) PRIMARY KEY,
+  user_id BIGINT UNSIGNED NOT NULL,
+  expires_at DATETIME NOT NULL,
+  FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
+CREATE TABLE IF NOT EXISTS password_resets (
+  token_hash CHAR(64) PRIMARY KEY,
+  user_id BIGINT UNSIGNED NOT NULL,
+  expires_at DATETIME NOT NULL,
+  FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
+CREATE TABLE IF NOT EXISTS products (
+  id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  slug VARCHAR(100) NOT NULL UNIQUE,
+  name VARCHAR(120) NOT NULL,
+  category VARCHAR(50) NOT NULL,
+  color VARCHAR(50) NOT NULL,
+  price DECIMAL(10,2) NOT NULL,
+  description TEXT NOT NULL,
+  images TEXT NOT NULL,
+  active BOOLEAN NOT NULL DEFAULT TRUE,
+  featured BOOLEAN NOT NULL DEFAULT FALSE,
+  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  CHECK (price >= 0)
+);
+CREATE TABLE IF NOT EXISTS variants (
+  id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  product_id BIGINT UNSIGNED NOT NULL,
+  size VARCHAR(20) NOT NULL,
+  stock INT UNSIGNED NOT NULL,
+  active BOOLEAN NOT NULL DEFAULT TRUE,
+  UNIQUE (product_id, size),
+  FOREIGN KEY (product_id) REFERENCES products(id)
+);
+CREATE TABLE IF NOT EXISTS carts (
+  user_id BIGINT UNSIGNED NOT NULL,
+  variant_id BIGINT UNSIGNED NOT NULL,
+  quantity INT UNSIGNED NOT NULL,
+  PRIMARY KEY (user_id, variant_id),
+  FOREIGN KEY (user_id) REFERENCES users(id),
+  FOREIGN KEY (variant_id) REFERENCES variants(id),
+  CHECK (quantity > 0)
+);
+CREATE TABLE IF NOT EXISTS orders (
+  id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  user_id BIGINT UNSIGNED NOT NULL,
+  status ENUM('active','in_transit','received','cancelled') NOT NULL DEFAULT 'active',
+  confirmed BOOLEAN NOT NULL DEFAULT FALSE,
+  full_name VARCHAR(120) NOT NULL,
+  address VARCHAR(500) NOT NULL,
+  phone VARCHAR(40) NOT NULL,
+  note VARCHAR(250) NOT NULL,
+  subtotal DECIMAL(10,2) NOT NULL,
+  shipping DECIMAL(10,2) NOT NULL,
+  total DECIMAL(10,2) NOT NULL,
+  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (user_id) REFERENCES users(id),
+  INDEX (user_id, created_at),
+  INDEX (status, created_at)
+);
+CREATE TABLE IF NOT EXISTS order_items (
+  order_id BIGINT UNSIGNED NOT NULL,
+  variant_id BIGINT UNSIGNED NOT NULL,
+  product_name VARCHAR(120) NOT NULL,
+  size VARCHAR(20) NOT NULL,
+  color VARCHAR(50) NOT NULL,
+  price DECIMAL(10,2) NOT NULL,
+  quantity INT UNSIGNED NOT NULL,
+  PRIMARY KEY (order_id, variant_id),
+  FOREIGN KEY (order_id) REFERENCES orders(id),
+  FOREIGN KEY (variant_id) REFERENCES variants(id)
+);
+CREATE TABLE IF NOT EXISTS contact_messages (
+  id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(120) NOT NULL,
+  email VARCHAR(254) NOT NULL,
+  message TEXT NOT NULL,
+  kind ENUM('contact','return','support') NOT NULL,
+  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);

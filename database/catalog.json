@@ -1,0 +1,414 @@
+[
+  {
+    "slug": "regix",
+    "name": "REGIX",
+    "category": "Tee",
+    "color": "Black",
+    "price": 650,
+    "description": "King energy, remixed. Clean cuts and royal confidence, built for the block.",
+    "images": [
+      "/images/regix-front.webp",
+      "/images/regix-back.webp"
+    ],
+    "variants": [
+      {
+        "size": "S",
+        "stock": 8
+      },
+      {
+        "size": "M",
+        "stock": 6
+      },
+      {
+        "size": "L",
+        "stock": 9
+      },
+      {
+        "size": "XL",
+        "stock": 4
+      },
+      {
+        "size": "XXL",
+        "stock": 2
+      }
+    ],
+    "featured": true
+  },
+  {
+    "slug": "crownified",
+    "name": "CROWNIFIED",
+    "category": "Tee",
+    "color": "Black",
+    "price": 650,
+    "description": "A crowned skull print with a bold back statement.",
+    "images": [
+      "/images/crowned-front.webp",
+      "/images/crowned-back.webp"
+    ],
+    "variants": [
+      {
+        "size": "S",
+        "stock": 8
+      },
+      {
+        "size": "M",
+        "stock": 6
+      },
+      {
+        "size": "L",
+        "stock": 9
+      },
+      {
+        "size": "XL",
+        "stock": 4
+      },
+      {
+        "size": "XXL",
+        "stock": 2
+      }
+    ],
+    "featured": true
+  },
+  {
+    "slug": "shadow",
+    "name": "SHADOW",
+    "category": "Tee",
+    "color": "White",
+    "price": 700,
+    "description": "A white graphic tee with layered lettering and a star print across the back.",
+    "images": [
+      "/images/shining-front.webp",
+      "/images/shining-back.webp"
+    ],
+    "variants": [
+      {
+        "size": "S",
+        "stock": 0
+      },
+      {
+        "size": "M",
+        "stock": 0
+      },
+      {
+        "size": "L",
+        "stock": 0
+      },
+      {
+        "size": "XL",
+        "stock": 0
+      },
+      {
+        "size": "XXL",
+        "stock": 0
+      }
+    ],
+    "featured": true
+  },
+  {
+    "slug": "dark-fang",
+    "name": "DARK FANG",
+    "category": "Tee",
+    "color": "Purple",
+    "price": 700,
+    "description": "Purple streetwear tee with a Doberman print and a cross graphic.",
+    "images": [
+      "/images/dark-fang-front.webp",
+      "/images/dark-fang-back.webp"
+    ],
+    "variants": [
+      {
+        "size": "S",
+        "stock": 8
+      },
+      {
+        "size": "M",
+        "stock": 6
+      },
+      {
+        "size": "L",
+        "stock": 9
+      },
+      {
+        "size": "XL",
+        "stock": 4
+      },
+      {
+        "size": "XXL",
+        "stock": 2
+      }
+    ],
+    "featured": true
+  },
+  {
+    "slug": "catacalysm",
+    "name": "CATACALYSM",
+    "category": "Tee",
+    "color": "Black",
+    "price": 700,
+    "description": "A black tee with a cat graphic and purple cross detailing.",
+    "images": [
+      "/images/shadow-front.webp",
+      "/images/shadow-back.webp"
+    ],
+    "variants": [
+      {
+        "size": "S",
+        "stock": 8
+      },
+      {
+        "size": "M",
+        "stock": 6
+      },
+      {
+        "size": "L",
+        "stock": 9
+      },
+      {
+        "size": "XL",
+        "stock": 4
+      },
+      {
+        "size": "XXL",
+        "stock": 2
+      }
+    ],
+    "featured": true
+  },
+  {
+    "slug": "noirstrike",
+    "name": "NOIRSTRIKE",
+    "category": "Shorts",
+    "color": "Black",
+    "price": 550,
+    "description": "Black shorts with a purple TRAPKINGS graphic and cross detail.",
+    "images": [
+      "/images/exclusive-shorts-front.webp",
+      "/images/exclusive-shorts-back.webp"
+    ],
+    "variants": [
+      {
+        "size": "S",
+        "stock": 8
+      },
+      {
+        "size": "M",
+        "stock": 6
+      },
+      {
+        "size": "L",
+        "stock": 9
+      },
+      {
+        "size": "XL",
+        "stock": 4
+      }
+    ],
+    "featured": true
+  },
+  {
+    "slug": "inkline-short",
+    "name": "INKLINE SHORT",
+    "category": "Shorts",
+    "color": "Black",
+    "price": 550,
+    "description": "Black shorts with a large contrasting monogram.",
+    "images": [
+      "/images/inline-shorts-front.webp",
+      "/images/inline-shorts-back.webp"
+    ],
+    "variants": [
+      {
+        "size": "S",
+        "stock": 8
+      },
+      {
+        "size": "M",
+        "stock": 6
+      },
+      {
+        "size": "L",
+        "stock": 9
+      },
+      {
+        "size": "XL",
+        "stock": 4
+      }
+    ],
+    "featured": false
+  },
+  {
+    "slug": "bling",
+    "name": "BLING",
+    "category": "Tee",
+    "color": "Black",
+    "price": 650,
+    "description": "A black graphic tee with the TRAPKINGS wordmark and a statement print on the back.",
+    "images": [
+      "/images/bling-front.webp",
+      "/images/bling-back.webp"
+    ],
+    "variants": [
+      {
+        "size": "S",
+        "stock": 8
+      },
+      {
+        "size": "M",
+        "stock": 6
+      },
+      {
+        "size": "L",
+        "stock": 9
+      },
+      {
+        "size": "XL",
+        "stock": 4
+      },
+      {
+        "size": "XXL",
+        "stock": 2
+      }
+    ],
+    "featured": false
+  },
+  {
+    "slug": "inkline",
+    "name": "INKLINE",
+    "category": "Tee",
+    "color": "Black",
+    "price": 700,
+    "description": "A black graphic tee with a small chest logo and oversized back monogram.",
+    "images": [
+      "/images/cataclysm-front.webp",
+      "/images/cataclysm-back.webp"
+    ],
+    "variants": [
+      {
+        "size": "S",
+        "stock": 8
+      },
+      {
+        "size": "M",
+        "stock": 6
+      },
+      {
+        "size": "L",
+        "stock": 9
+      },
+      {
+        "size": "XL",
+        "stock": 4
+      },
+      {
+        "size": "XXL",
+        "stock": 2
+      }
+    ],
+    "featured": false
+  },
+  {
+    "slug": "cross-ii",
+    "name": "CROSS II",
+    "category": "Tee",
+    "color": "White",
+    "price": 650,
+    "description": "A white tee with a purple wordmark and oversized back graphic.",
+    "images": [
+      "/images/exclusive-white-front.webp",
+      "/images/exclusive-white-back.webp"
+    ],
+    "variants": [
+      {
+        "size": "S",
+        "stock": 8
+      },
+      {
+        "size": "M",
+        "stock": 6
+      },
+      {
+        "size": "L",
+        "stock": 9
+      },
+      {
+        "size": "XL",
+        "stock": 4
+      },
+      {
+        "size": "XXL",
+        "stock": 2
+      }
+    ],
+    "featured": false
+  },
+  {
+    "slug": "cross-i",
+    "name": "CROSS I",
+    "category": "Tee",
+    "color": "Black",
+    "price": 650,
+    "description": "A black tee with gothic lettering and a tonal back graphic.",
+    "images": [
+      "/images/exclusive-black-front.webp",
+      "/images/exclusive-black-back.webp"
+    ],
+    "variants": [
+      {
+        "size": "S",
+        "stock": 8
+      },
+      {
+        "size": "M",
+        "stock": 6
+      },
+      {
+        "size": "L",
+        "stock": 9
+      },
+      {
+        "size": "XL",
+        "stock": 4
+      },
+      {
+        "size": "XXL",
+        "stock": 2
+      }
+    ],
+    "featured": false
+  },
+  {
+    "slug": "reflective",
+    "name": "REFLECTIVE",
+    "category": "Tee",
+    "color": "Black",
+    "price": 650,
+    "description": "A black tee with a reflective-style crown logo and a back monogram.",
+    "images": [
+      "/images/reflective-front.webp",
+      "/images/reflective-back.webp"
+    ],
+    "variants": [
+      {
+        "size": "S",
+        "stock": 8
+      },
+      {
+        "size": "M",
+        "stock": 6
+      },
+      {
+        "size": "L",
+        "stock": 9
+      },
+      {
+        "size": "XL",
+        "stock": 4
+      },
+      {
+        "size": "XXL",
+        "stock": 2
+      }
+    ],
+    "featured": false
+  }
+]
